@@ -3,8 +3,9 @@ var game = new Phaser.Game(1024, 1024, Phaser.AUTO);
 var Start = function(){};
 Start.prototype = {
     preload: function() {
-        game.load.image('loadbar', 'loadbar.png')
-        game.load.image('loadback', 'loadback.png')
+        game.load.image('loadbar', 'assets/bad-loadbar.png')
+        game.load.image('loadback', 'assets/bad-loadback.png')
+        game.load.image('logo', 'assets/logo.png')
         game.load.script('loading', 'states/load.js')
     },
 
