@@ -28,6 +28,8 @@ Load.prototype = {
 
         game.load.script("states/menu")
         game.load.script("fade")
+        game.load.image("grass", "assets/grass.png")
+        game.load.image("cover", "assets/cover.png")
     }, 
 
     create: function() {

@@ -4,14 +4,11 @@ Fade = {
 
     changeState: function () 
     {
-        console.log("CHANGESTATE");
         game.state.start(Fade.nextState);
         // Fade.fadeOut();
     },
 
     transition: function (nextState) {
-        console.log("TRANSITION");
-
         graphics = game.add.graphics(0, 0);
         graphics.beginFill(Fade.fadeColor, 1);
         graphics.drawRect(0, 0, game.width, game.height);
@@ -26,10 +23,6 @@ Fade = {
         s.start();
     },
 
-    DONE: function () {
-        console.log("OUT");
-    },
-
     fadeOut: function () {
         raphics = game.add.graphics(0, 0);
         raphics.beginFill(Fade.fadeColor, 1);
@@ -40,8 +33,5 @@ Fade = {
         s = game.add.tween(raphics)
         s.to({ alpha: 0 }, 200, null)
         s.start();
-        s.onComplete.add(Fade.DONE)
-
-        console.log(raphics)
     }
 }
