@@ -27,15 +27,26 @@ Load.prototype = {
         // this.load.setPreloadSprite(loadBar);
 
         game.load.script("states/menu")
+        game.load.script("states/continue")
+        game.load.script("states/newGame")
         game.load.script("fade")
+        game.load.script("save")
+        game.load.script("createButton")
         game.load.image("grass", "assets/grass.png")
+        game.load.image("menu", "assets/menu.png")
         game.load.image("cover", "assets/cover.png")
     }, 
 
     create: function() {
         game.state.add("Menu", Menu)
+        game.state.add("NewGame", NewGame)
+        game.state.add("Continue", Continue)
 
         text.text = "PRESS SPACE"
+
+        Save.load();
+        Save.game = [null, null, null]
+        // Save.save();
 
         space = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         space.onDown.addOnce(function() {Fade.transition("Menu")})
