@@ -16,7 +16,7 @@ Start.prototype = {
         game.state.add("Load", Load)
         game.state.start("Load")
     }
-};
+}
 
 game.state.add("Start", Start)
 game.state.start("Start")

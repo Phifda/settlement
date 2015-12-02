@@ -29,10 +29,14 @@ Load.prototype = {
         game.load.script("states/menu")
         game.load.script("states/continue")
         game.load.script("states/newGame")
+        game.load.script("states/mainArea")
         game.load.script("fade")
         game.load.script("save")
         game.load.script("createButton")
         game.load.image("grass", "assets/grass.png")
+        game.load.image("grassTile", "assets/grassTile.png")
+        game.load.image("placingGrid", "assets/placingGrid.png")
+        game.load.image("currentGrid", "assets/currentGrid.png")
         game.load.image("menu", "assets/menu.png")
         game.load.image("cover", "assets/cover.png")
     }, 
@@ -40,6 +44,7 @@ Load.prototype = {
     create: function() {
         game.state.add("Menu", Menu)
         game.state.add("NewGame", NewGame)
+        game.state.add("MainArea", MainArea)
         game.state.add("Continue", Continue)
 
         text.text = "PRESS SPACE"

@@ -4,6 +4,8 @@ NewGame.prototype = {
     startNewFile: function(saveNum) {
         console.log("NEW SAVE FILE ", saveNum+1)
         Save.game[saveNum] = "GOOD"
+
+        Fade.transition("MainArea")
     },
 
     newFile: [
