@@ -3,7 +3,8 @@ var NewGame = function() {};
 NewGame.prototype = {
     startNewFile: function(saveNum) {
         console.log("NEW SAVE FILE ", saveNum+1)
-        Save.game[saveNum] = "GOOD"
+        Save.game[saveNum] = {}
+        Save.num = saveNum
 
         Fade.transition("MainArea")
     },

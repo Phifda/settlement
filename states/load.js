@@ -24,7 +24,7 @@ Load.prototype = {
         var loadBack = game.add.sprite(game.width/2-(741/2), game.height-150, 'loadback');
         var loadBar = game.add.sprite(game.width/2-(741/2), game.height-150, 'loadbar');
 
-        // this.load.setPreloadSprite(loadBar);
+        this.load.setPreloadSprite(loadBar);
 
         game.load.script("states/menu")
         game.load.script("states/continue")
@@ -39,6 +39,16 @@ Load.prototype = {
         game.load.image("currentGrid", "assets/currentGrid.png")
         game.load.image("menu", "assets/menu.png")
         game.load.image("cover", "assets/cover.png")
+
+        this.buildings = [
+            "farm",
+            "archeryRange",
+            "hut"
+        ]
+
+        for (var i = this.buildings.length - 1; i >= 0; i--) {
+            game.load.image(this.buildings[i], "assets/"+this.buildings[i]+".png")
+        };
     }, 
 
     create: function() {

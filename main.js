@@ -15,6 +15,7 @@ Start.prototype = {
 
         game.state.add("Load", Load)
         game.state.start("Load")
+        console.log(game)
     }
 }
 
